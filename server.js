@@ -16,6 +16,8 @@ app.get('/', function(req, res) {
 
 app.use('/js', express.static(__dirname + '/client/js'));
 
+//REST API
+app.get('/api/meetups', meetupsController.list);
 app.post('/api/meetups', meetupsController.create); // passed a request and response by express
 
 
